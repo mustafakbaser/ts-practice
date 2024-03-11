@@ -55,10 +55,14 @@ function App() {
     setTodo(''); // Clear input after add
   }
 
+  const deleteMessage = (id: number) => {
+    setTodos(todos.filter(todo => todo.id != id))
+  }
+
   return (
     <div className="App">
       <Input addMessage={addMessage} todo={todo} setTodo={setTodo} />
-      <Message todos = {todos}/>
+      <Message deleteMessage={deleteMessage} todos = {todos}/>
     </div>
   );
 }
