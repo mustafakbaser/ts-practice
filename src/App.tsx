@@ -51,7 +51,7 @@ function App() {
   console.log(todos, "todos");
 
   const addMessage = () => {
-    if(todo) setTodos([...todos, {message: todo, id: todos.length+1}]) // ... : Spreat operators
+    if(todo) setTodos([...todos, {message: todo, id: todos.length+1}]) // ... : Spread operators
     setTodo(''); // Clear input after add
   }
 
